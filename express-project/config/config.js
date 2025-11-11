@@ -67,7 +67,7 @@ const config = {
     },
     // 视频上传配置
     video: {
-      maxSize: process.env.VIDEO_MAX_SIZE || '100mb',
+      maxSize: process.env.VIDEO_MAX_SIZE || '10GB',
       allowedTypes: ['video/mp4', 'video/avi', 'video/mov', 'video/wmv', 'video/flv', 'video/webm'],
       // 视频上传策略配置（只支持本地和R2，不支持第三方图床）
       strategy: process.env.VIDEO_UPLOAD_STRATEGY || 'local', // 'local' 或 'r2'
