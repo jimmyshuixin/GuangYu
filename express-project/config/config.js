@@ -43,7 +43,7 @@ const config = {
       maxSize: process.env.IMAGE_MAX_SIZE || '10mb',
       allowedTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
       // 图片上传策略配置
-      strategy: process.env.IMAGE_UPLOAD_STRATEGY || 'imagehost', // 'local', 'imagehost' 或 'r2'
+      strategy: process.env.IMAGE_UPLOAD_STRATEGY || 'local', // 'local', 'imagehost' 或 'r2'
       // 本地存储配置
       local: {
         uploadDir: process.env.IMAGE_LOCAL_UPLOAD_DIR || 'uploads/images',
