@@ -87,6 +87,7 @@ services:
       - "8080:80"
     volumes:
       - /etc/localtime:/etc/localtime:ro
+      - backend_uploads:/usr/share/nginx/html/uploads
     networks:
       - xiaoshiliu-network
     depends_on:
