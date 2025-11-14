@@ -30,6 +30,9 @@ const statsRoutes = require('./routes/stats');
 const adminRoutes = require('./routes/admin');
 const categoriesRoutes = require('./routes/categories');
 
+// 从环境变量读取上传限制，如果未设置，则默认为 '100mb'
+const limit = process.env.UPLOAD_MAX_SIZE || '100mb';
+
 const app = express();
 
 // 中间件配置
@@ -47,8 +50,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));  // 显式处理OPTIONS请求
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+app.use(express.json({ limit: limit }));
+app.use(express.urlencoded({ extended: true, limit: limit }));
 
 // 静态文件服务 - 提供uploads目录的文件访问
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
