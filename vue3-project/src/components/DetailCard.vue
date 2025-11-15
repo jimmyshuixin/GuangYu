@@ -1336,7 +1336,7 @@ const toggleCollect = async () => {
 
 const handleShare = async () => {
   try {
-    const shareUrl = `【${props.item.title}-${props.item.author}| 光隅 - 你的校园图文部落】${window.location.origin}/post?id=${props.item.id}`
+    const shareUrl = `【${props.item.title}-${props.item.author}| 光隅 - 虚宁的一隅】${window.location.origin}/post?id=${props.item.id}`
 
     // 检查是否支持现代剪贴板API
     if (navigator.clipboard && navigator.clipboard.writeText) {
