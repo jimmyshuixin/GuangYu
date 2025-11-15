@@ -452,9 +452,9 @@ const getAllImageData = async () => {
 
 
 // 压缩图片
-const compressImage = (file, maxSizeMB = 150, quality = 0.4) => {
+const compressImage = (file, maxSizeMB = 5, quality = 0.4) => {
   return new Promise((resolve) => {
-    // 对于100mb以下的文件不进行压缩
+    // 对于5mb以下的文件不进行压缩
     if (file.size <= maxSizeMB * 1024 * 1024) {
       resolve(file)
       return

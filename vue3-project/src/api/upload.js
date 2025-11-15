@@ -1,7 +1,7 @@
 // 压缩图片函数
-const compressImage = (file, maxSizeMB = 150, quality = 0.4) => {
+const compressImage = (file, maxSizeMB = 5, quality = 0.4) => {
   return new Promise((resolve) => {
-    // 对于100mb以下的文件不进行压缩
+    // 对于5mb以下的文件不进行压缩
     if (file.size <= maxSizeMB * 1024 * 1024) {
       resolve(file)
       return
@@ -12,7 +12,7 @@ const compressImage = (file, maxSizeMB = 150, quality = 0.4) => {
     const img = new Image()
 
     img.onload = () => {
-      // 超过100mb的图片使用强力压缩
+      // 超过5mb的图片使用强力压缩
       const compressQuality = 0.4
       const maxDimension = 1200
 
