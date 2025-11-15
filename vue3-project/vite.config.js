@@ -33,11 +33,11 @@ export default defineConfig({
   /* allowedHosts: [   //添加白名单域名，手动部署取消前面的注释把qq.com替换成你的白名单域名
       'localhost',
       '127.0.0.1',
-      'gallary.xvyin.com'
+      'gallery.xvyin.com'
     ],  */
     proxy: {
       '/api': {
-        target: 'https://gallary.xvyin.com',//后端接口地址
+        target: 'https://gallery.xvyin.com',//后端接口地址
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api')
       },

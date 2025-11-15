@@ -46,11 +46,11 @@ services:
       JWT_SECRET: ${JWT_SECRET:-xiaoshiliu_secret_key_2025}
       JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-7d}
       REFRESH_TOKEN_EXPIRES_IN: ${REFRESH_TOKEN_EXPIRES_IN:-30d}
-      API_BASE_URL: https://gallary.xvyin.com
+      API_BASE_URL: https://gallery.xvyin.com
       UPLOAD_MAX_SIZE: ${UPLOAD_MAX_SIZE:-100mb}
       UPLOAD_STRATEGY: ${UPLOAD_STRATEGY:-local}
       LOCAL_UPLOAD_DIR: ${LOCAL_UPLOAD_DIR:-uploads}
-      LOCAL_BASE_URL: ${LOCAL_BASE_URL:-https://gallary.xvyin.com}
+      LOCAL_BASE_URL: ${LOCAL_BASE_URL:-https://gallery.xvyin.com}
       IMAGEHOST_API_URL: ${IMAGEHOST_API_URL:-https://api.xinyew.cn/api/jdtc}
       IMAGEHOST_TIMEOUT: ${IMAGEHOST_TIMEOUT:-60000}
       TZ: Asia/Shanghai
@@ -78,7 +78,7 @@ services:
       context: ./vue3-project
       dockerfile: Dockerfile
       args:
-        VITE_API_BASE_URL: https://gallary.xvyin.com/api
+        VITE_API_BASE_URL: https://gallery.xvyin.com/api
     container_name: xiaoshiliu-frontend
     restart: unless-stopped
     environment:
